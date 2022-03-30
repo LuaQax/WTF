@@ -26,7 +26,10 @@ Section:NewButton("Internal UI", "Click to execute", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQax/WTF/main/Executor/InternalUI/LuaQax/Main/main"))()
 end)
 Section:NewButton("Fps Booster", "Click to execute", function() 
-        loadstring(game:HttpGet("FpsBooster"))()
+        loadstring(game:HttpGet("loadstring(game:HttpGet('https://raw.githubusercontent.com/LuaQax/WTF/main/Roblox/AllGameSupport/FpsBooster/Main/main'))()"))()
+end)
+Section:NewButton("Chair Remover", "Click to execute", function() 
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQax/WTF/main/RemoveChair.vbs"))()
 end)
 --DONT DELETE HERE---------------------------------------------------
         local player = game.Players.LocalPlayer
