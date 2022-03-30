@@ -28,7 +28,7 @@ end)
 Section:NewButton("Fps Booster", "Click to execute", function() 
         loadstring(game:HttpGet("loadstring(game:HttpGet('https://raw.githubusercontent.com/LuaQax/WTF/main/Roblox/AllGameSupport/FpsBooster/Main/main'))()"))()
 end)
-Section:NewButton("Chair Remover", "Click to execute", function() 
+    Section:NewButton("Chair Remover", "Press F to remove", function() 
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQax/WTF/main/RemoveChair.vbs"))()
 end)
 --DONT DELETE HERE---------------------------------------------------
