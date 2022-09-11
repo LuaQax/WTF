@@ -114,7 +114,7 @@ end
 
 
 local function nilmap()
-    workspace.Gravity = 0
+    workspace.Gravity = 198.2
     for _,v in pairs(workspace:GetDescendants()) do
         if v:IsA("Part") then
             v.CanCollide = false
