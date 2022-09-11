@@ -102,7 +102,7 @@ local function chat(msg)
     ChatStuff:SetTextFromInput("")
 end
 
-chat(":Sm [ CMD-AH ] LOADED, REMODDED BY TEN.|:name me [ CMD-AH ] REMODDER")
+chat(":Sm [ CMD-AH ] LOADED, REMODDED BY TEN.|:name me [ CMD-AH ] BUYER")
 
 local FolderAntiParts = Instance.new("Folder", game.ReplicatedStorage)
 
