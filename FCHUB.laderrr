@@ -66,7 +66,7 @@ for i, v in pairs(plrGui:GetChildren()) do
 
                     local tableofkeys = {
                         --Free Keys
-                        "TencentGame,_isajgdfe20220910",
+                        "TencentGame,_isajgdfe20220925",
 
                         --Boosters Key
                         "TencentGames,AFDFMFIFNFKFEFY",
