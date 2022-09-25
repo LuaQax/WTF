@@ -467,17 +467,17 @@ Gen:Toggle{
     StartingState = false,
     Callback = function(v)
         if v then
-            chat(":f3x |:sm [ CMD-AH ] This server is locked.| :setmsg [ CMD-AH ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
+            chat(":f3x |:sm [ VELO ] This server is locked.| :setmsg [ CMD-AH ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
             ServerlockV = true
         else
-            chat(":f3x |:sm [ CMD-AH ] This server is unlocked.|:unpunish all|:setmsg [ CMD-AH ] This server is unlocked. \t\t Whitelisted users: " .. tostring(#whitelist))
+            chat(":f3x |:sm [ VELO ] This server is unlocked.|:unpunish all|:setmsg [ CMD-AH ] This server is unlocked. \t\t Whitelisted users: " .. tostring(#whitelist))
             ServerlockV = false
         end
     end
 }
 
 Gen:Toggle{
-    Name = "Advertise CMD-AH modded",
+    Name = "Advertise VELO modded",
     StartingState = false,
     Callback = function(v)
         if v then
@@ -493,10 +493,10 @@ Gen:Toggle{
     StartingState = false,
     Callback = function(v)
         if v then
-            chat(":f3x |:sm [ CMD-AH ] This server is locked due someone is abusing.| :setmsg [ CMD-AH ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
+            chat(":f3x |:sm [ VELO ] This server is locked due someone is abusing.| :setmsg [ CMD-AH ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
             ServerlockV = true
         else
-            chat(":f3x |:sm [ CMD-AH ] This server is unlocked.|:unpunish all|:setmsg [ CMD-AH ] This server is unlocked. \t\t Whitelisted users: " .. tostring(#whitelist))
+            chat(":f3x |:sm [ VELO ] This server is unlocked.|:unpunish all|:setmsg [ CMD-AH ] This server is unlocked. \t\t Whitelisted users: " .. tostring(#whitelist))
             ServerlockV = false
         end
     end
@@ -661,7 +661,7 @@ Buttons:Button{
 	Name = "Reduce Lag",
     desc = "Deletes all the parts in workspace (serversided)",
 	Callback = function()
-        chat(":runc Reduce lag|:sm [ CMD-AH ] Laggable or Crashable Build Found! Delete all build in 15 sec.|:cd 15")
+        chat(":runc Reduce lag|:sm [ VELO ] Laggable or Crashable Build Found! Delete all build in 15 sec.|:cd 15")
 wait(17)
       	delparts()
         chat(":music|:fix")
@@ -754,8 +754,8 @@ end)
 addcmd("serverlock", "sl", function(plr)
     for _,v in pairs(game.Players:GetPlayers()) do
         if not table.find(whitelist, v.Name) and string.sub(string.lower(v.Name), 1, #plr) == plr then
-    chat(":sm [ CMD-AH ] This server is locked due " .. v.Name .. " is abusing.")
-    chat(":setmsg [ CMD-AH ] This server is locked.")
+    chat(":sm [ VELO ] This server is locked due " .. v.Name .. " is abusing.")
+    chat(":setmsg [ VELO ] This server is locked.")
     ServerlockV = true     
             Window:Notification{
                 Title = "CMD",
@@ -769,7 +769,7 @@ addcmd("serverlock", "sl", function(plr)
 end)
 
 addcmd("unserverlock", "unsl", function()
-    chat(":sm [ CMD-AH ] This server is unlocked.|:setmsg [ CMD-AH ]|:unpunish others")
+    chat(":sm [ VELO ] This server is unlocked.|:setmsg [ CMD-AH ]|:unpunish others")
     ServerlockV = false     
 end)
 
@@ -830,7 +830,7 @@ addcmd("blacklist", "ban", function(plr)
     for _,v in pairs(game.Players:GetPlayers()) do
         if not table.find(Blacklist, v.Name) and string.sub(string.lower(v.Name), 1, #plr) == plr then
             table.insert(Blacklist, v.Name)
-            chat(":sm [ CMD-AH ] User " .. v.Name .. " has been banned/blacklisted from this server. (Want to appeal? pm Ten.)")
+            chat(":sm [ VELO ] User " .. v.Name .. " has been banned/blacklisted from this server. (Want to appeal? pm Ten.)")
             Window:Notification{
                 Title = "CMD",
                 Text = v.Name .. " Blacklisted!",
@@ -846,7 +846,7 @@ addcmd("unblacklist", "unban", function(plr)
     for _,v in pairs(game.Players:GetPlayers()) do
         if table.find(Blacklist, v.Name) and string.sub(string.lower(v.Name), 1, #plr) == plr then
             table.remove(Blacklist, table.find(Blacklist,v.Name))
-            chat(":sm [ CMD-AH ] User " .. v.Name .. " has been unbanned/unblacklisted from this server!")
+            chat(":sm [ VELO ] User " .. v.Name .. " has been unbanned/unblacklisted from this server!")
             Window:Notification{
                 Title = "CMD",
                 Text = v.Name .. " unblacklisted!",
@@ -862,7 +862,7 @@ end)
 addcmd("kick", nil, function(plr)
  for _,v in pairs(game.Players:GetPlayers()) do
         if not table.find(Blacklist, v.Name) and string.sub(string.lower(v.Name), 1, #plr) == plr then
-    chat(":loadb svs|:sm get rekt kicked|:fov " .. v.Name .. " 0|:fviewcam " .. v.Name .. " v|:sm [ CMD-AH ] User " .. v.Name .. " has been kicked from this server.|:wait 6|:unloadb rsv")
+    chat(":loadb svs|:sm get rekt kicked|:fov " .. v.Name .. " 0|:fviewcam " .. v.Name .. " v|:sm [ VELO ] User " .. v.Name .. " has been kicked from this server.|:wait 6|:unloadb rsv")
 Window:Notification{
                 Title = "CMD",
                 Text = v.Name .. " kicked!",
@@ -927,7 +927,7 @@ addcmd("whitelist", "wl", function(plr)
         if not table.find(whitelist, v.Name) and string.sub(string.lower(v.Name), 1, #plr) == plr then
             table.insert(whitelist, v.Name)
             if ServerlockV then
-                chat(":setmsg [ CMD-AH ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
+                chat(":setmsg [ VELO ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
             end
             chat(":talk " .. v.Name .. " [CMD]\nWHITELISTED")
             task.wait(.25)
@@ -948,7 +948,7 @@ addcmd("unwhitelist", "unwl", function(plr)
         if table.find(whitelist, v.Name) and string.sub(string.lower(v.Name), 1, #plr) == plr then
             table.remove(whitelist, table.find(whitelist,v.Name))
             if ServerlockV then
-                chat(":setmsg [ CMD-AH ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
+                chat(":setmsg [ VELO ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
             end
             Window:Notification{
                 Title = "CMD",
