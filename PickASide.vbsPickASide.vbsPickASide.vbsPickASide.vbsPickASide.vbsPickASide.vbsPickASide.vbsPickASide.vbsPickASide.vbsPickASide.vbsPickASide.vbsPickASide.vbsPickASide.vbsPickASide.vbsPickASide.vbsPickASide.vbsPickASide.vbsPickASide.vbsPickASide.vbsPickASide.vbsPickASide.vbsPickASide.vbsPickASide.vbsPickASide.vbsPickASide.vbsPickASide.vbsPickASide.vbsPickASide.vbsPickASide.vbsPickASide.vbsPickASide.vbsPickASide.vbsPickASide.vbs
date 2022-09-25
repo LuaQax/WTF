@@ -4,7 +4,7 @@ end
 
 local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 
-local Window = Lib:Create{Name = "CMD: AH", Size = UDim2.fromOffset(600, 400), Theme = Lib.Themes.Dark,  Link = "https://github.com/quivings/"}
+local Window = Lib:Create{Name = "VELO", Size = UDim2.fromOffset(600, 400), Theme = Lib.Themes.Dark,  Link = "https://github.com/quivings/"}
 
 local ChatStuff = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
 
