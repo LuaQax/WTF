@@ -66,7 +66,7 @@ for i, v in pairs(plrGui:GetChildren()) do
 
                     local tableofkeys = {
                         --Free Keys
-                        "TencentGame,_isajgdfe20220925",
+                        "TencentGame,_zdgsfsthsrh/20221015",
 
                         --Boosters Key
                         "TencentGames,AFDFMFIFNFKFEFY",
@@ -138,7 +138,7 @@ wait(3)
                 TextLabel1.Position = UDim2.new(0.5, 0,0.5, 0)
                 TextLabel1.Font = Enum.Font.SciFi
                 TextLabel1.TextSize = 14
-                TextLabel1.Text = "Use !Key In your joined server To Get Key "
+                TextLabel1.Text = "Use ?key In your joined server To Get Key "
                 TextLabel1.TextColor = BrickColor.new("Blue")
                 TextLabel1.BackgroundTransparency = 1
                 
