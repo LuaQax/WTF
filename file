@@ -1,6 +1,6 @@
-if game.PlaceID == 333164326 then
+if game.PlaceId == 333164326 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQax/WTF/main/VelocityR"))() --Loadstring
 
-elseif game.PlaceID == 663655429 then -- Place ID / Game ID
-loadstring(game:HttpGet("https://bit.ly/PickASideRoblox"))() --Loadstring
+elseif game.PlaceId == 663655429 then -- Place ID / Game ID
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQax/WTF/main/VelocityR"))() --Loadstring
 end
