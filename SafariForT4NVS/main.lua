@@ -582,7 +582,7 @@ local function onChatted(player, message)
     -- Check if the message is the !rejoin command
     if message == rejoin then
         -- Rejoin the game [ Safari ]
-        chat(":chatnotifyc all 255 255 255 [ Safari ] " .. player.Name .. " needs to rejoin!")
+        chat(":chatnotifyc all 49 255 90 [ Safari ] " .. player.Name .. " needs to rejoin!")
     elseif message == appeal then
 chat(":chatnotifyc " .. player.Name .. ",me 255 0 0 [ Safari ] Please wait for a response from a staff member.\nthe player who has called the service and has been list to dial blacklist will be ignore. caller: ".. player.Name .."|:music 4814018992")
     elseif message == vk then
@@ -711,7 +711,7 @@ Window:AddCommand('ban', {'player', 'allowAppeal? (yes or no)', 'during', 'reaso
          else
             message = message .. "\nYou don't have eligibility to appeal."
          end
-         chat(":music 1548304764 true|:chatnotifyc all 0 255 0 " .. message)
+         chat(":music 1548304764 true|:chatnotifyc 49 255 90  " .. message)
          Window:Notification{
             Title = "CMD",
             Text = v.Name .. " Blacklisted!",
@@ -737,7 +737,7 @@ Window:AddCommand('unban', {'player'}, 'Unban a player from the server', functio
       if table.find(Blacklist, v.Name) and string.sub(string.lower(v.Name), 1, #playerName) == string.lower(playerName) then
          player = v
          table.remove(Blacklist, table.find(Blacklist, v.Name))
-         chat(":music 1548304764 true|:chatnotifyc all 0 255 0 [ Safari ] User " .. v.Name .. ",\nhas been unbanned/unblacklisted from this server!")
+         chat(":music 1548304764 true|:chatnotifyc all 49 255 90  [ Safari ] User " .. v.Name .. ",\nhas been unbanned/unblacklisted from this server!")
          Window:Notification{
             Title = "CMD",
             Text = v.Name .. " unblacklisted!",
@@ -793,9 +793,9 @@ Window:AddCommand('kwl', {'Player'}, 'whitelist the player, so they dont get kic
         if string.sub(string.lower(v.Name), 1, #plr) == plr then
             if not whitelist[v.Name] then
                 whitelist[v.Name] = true
-                chat(":music 1548304764 true|:chatnotifyc all 0 255 0 Successfully whitelisted player " .. v.Name)
+                chat(":music 1548304764 true|:chatnotifyc all 49 255 90  Successfully whitelisted player " .. v.Name)
             else
-                chat(":music 2390695935 true 1 inf|:chatnotifyc all 255 0 0 Player " .. v.Name .. " is already whitelisted")
+                chat(":music 2390695935 true 1 inf|:chatnotifyc all 49 255 90 Player " .. v.Name .. " is already whitelisted")
             end
             break
         end
@@ -808,9 +808,9 @@ Window:AddCommand('unkwl', {'Player'}, 'unwhitelist the player, so they get kick
         if string.sub(string.lower(v.Name), 1, #plr) == plr then
             if whitelist[v.Name] then
                 whitelist[v.Name] = nil
-                chat(":music 1548304764 true|:chatnotifyc all 0 255 0 Successfully removed player " .. v.Name .. " from the whitelist")
+                chat(":music 1548304764 true|:chatnotifyc all 49 255 90  Successfully removed player " .. v.Name .. " from the whitelist")
             else
-                chat(":music 2390695935 true 1 inf|:chatnotifyc all 255 0 0 I think the man " .. v.Name .. " is not on the whitelist")
+                chat(":music 2390695935 true 1 inf|:chatnotifyc all 49 255 90  I think the man " .. v.Name .. " is not on the whitelist")
             end
             break
         end
@@ -863,13 +863,13 @@ Window:AddCommand('kick', {'Player', 'Reason'}, 'kick', function(Arguments, Spea
     for _,v in pairs(game.Players:GetPlayers()) do
         if string.sub(string.lower(v.Name), 1, #plr) == plr then
             if v.Name == game.Players.LocalPlayer.Name then -- check if player is trying to kick themselves
-                chat(":music 2390695935 true 1 inf|:chatnotifyc all 255 0 255 [ Safari ] The Safari staff T4NVS has attempted to kick himself")
+                chat(":music 2390695935 true 1 inf|:chatnotifyc all 49 255 90  [ Safari ] The Safari staff T4NVS has attempted to kick himself")
             elseif whitelist[v.Name] then
-                chat(":music 2390695935 true 1 inf|:chatnotifyc all 255 0 0 [ Safari ] Player " .. v.Name .. " is whitelisted, so I'm unable to kick them")
+                chat(":music 2390695935 true 1 inf|:chatnotifyc all 49 255 90  [ Safari ] Player " .. v.Name .. " is whitelisted, so I'm unable to kick them")
             elseif plr == "all" then
-                chat(":music 2390695935 true 1 inf|:chatnotifyc all 255 0 255 [ Safari ] Sorry, I don't kick all players at once.")
+                chat(":music 2390695935 true 1 inf|:chatnotifyc all 49 255 90  [ Safari ] Sorry, I don't kick all players at once.")
             else
-                chat(":music 1548304764 true|:loadb Cr|:fviewcam " .. v.Name .. " cr3|:chatnotifyc all 255 255 0 [ Safari ] \nKick result:\nPlayer Name: ".. v.Name .. "\nReason: " .. reason .. "\nUsed time: 00:02\n---------------------------------------\nSuccessfully kicked.|:wait 15|:unloadb Cr")
+                chat(":music 1548304764 true|:loadb Cr|:fviewcam " .. v.Name .. " cr3|:chatnotifyc all 49 255 90  [ Safari ] \nKick result:\nPlayer Name: ".. v.Name .. "\nReason: " .. reason .. "\nUsed time: 00:02\n---------------------------------------\nSuccessfully kicked.|:wait 15|:unloadb Cr")
             end
             break
         end
@@ -1169,7 +1169,7 @@ Window:AddCommand('anno', {'SetAnnoToTopMessage?', 'ShowTheMessageWasSendByYou?'
             Sender = " ( The message was sent by T4NVS )"
         end
 
-        chat(":talk all [ Safari ] Announcement: \n" .. Message .. "\n\n\n".. Sender .. "|:chatnotifyc all 0 255 0 [ Safari ] Announcement: \n" .. Message .."\n" .. Sender .. "\n")
+        chat(":talk all [ Safari ] Announcement: \n" .. Message .. "\n\n\n".. Sender .. "|:chatnotifyc all 49 255 90 [ Safari ] Announcement: \n" .. Message .."\n" .. Sender .. "\n")
 
         if AnnoSetMsg then
             chat(":setmsg [ Safari ] Announcement: " .. Message .. "\n" .. Sender)
@@ -1225,7 +1225,7 @@ Window:AddCommand('b', {'user'}, 'bring player but a shorten word', function(Arg
     end
 
     if not find then
-        chat(":chatnotifyc all 255 255 0 [ Safari ] Player not found.")
+        chat(":chatnotifyc all 49 255 90  [ Safari ] Player not found.")
     end
 end)
 
