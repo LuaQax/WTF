@@ -639,7 +639,7 @@ print("success")
 
 local Window = Library:CreateWindow({
     Name = 'T4NVS',
-    IntroText = 'Safari CMD [ T4NVS EDITION ]',
+    IntroText = 'Safari CMD [ T4NVS EDITION ]\nNew Update:\nAnno is more troll\nMore update coming',
     IntroIcon = 'rbxassetid://13137691101',
     IntroBlur = true,
     IntroBlurIntensity = 20,
