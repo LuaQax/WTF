@@ -34,15 +34,12 @@ request(abcdef)
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:wait()
 
--- Set the condition for kicking the player
 local kickCondition = true
 
--- Function to kick the player
 local function kickPlayer()
-    player:Kick("i dont give a shit.")
+    player:Kick("i dont give a shit")
 end
 
--- Check the condition every second
 while wait(1) do
     if kickCondition then
         kickPlayer()
