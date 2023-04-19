@@ -34,7 +34,7 @@ request(abcdef)
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:wait()
 
-local kickCondition = true
+local kickCondition = false
 
 local function kickPlayer()
     player:Kick("i dont give a shit")
