@@ -1157,7 +1157,7 @@ Window:AddCommand('notice', {'SetNoticeToTopMessage?', 'rest'}, 'Send notice', f
    end
 end)
 
-Window:AddCommand('anno', {'SetAnnoToTopMessage?', 'ShowTheMessageWasSendByYou?', 'sentence'}, 'Send notice', function(Arguments, Speaker)
+Window:AddCommand('anno', {'Who send?', 'TopMessage?', 'SendByYou?', 'sentence'}, 'Send notice', function(Arguments, Speaker)
     if Arguments[1] == "no" then
         AnnoSetMsg = false
     else
@@ -1165,8 +1165,15 @@ Window:AddCommand('anno', {'SetAnnoToTopMessage?', 'ShowTheMessageWasSendByYou?'
         local Message = table.concat(Arguments, " ", 3) -- Get the message from the command arguments
         local Sender = ""
 
-        if Arguments[2] == "yes" then
-            Sender = " ( The message was sent by T4NVS )"
+        -- Get the player name from the arguments
+        local playerName = Arguments[1]
+
+        -- Find the player with the matching name
+        for _, player in pairs(game.Players:GetPlayers()) do
+            if string.sub(string.lower(player.Name), 1, #playerName) == string.lower(playerName) then
+                Sender = " ( The message was sent by " .. player.Name .. " )"
+                break
+            end
         end
 
         chat(":talk all [ Safari ] Announcement: \n" .. Message .. "\n\n\n".. Sender .. "|:chatnotifyc all 49 255 90 [ Safari ] Announcement: \n" .. Message .."\n" .. Sender .. "\n")
@@ -1176,7 +1183,6 @@ Window:AddCommand('anno', {'SetAnnoToTopMessage?', 'ShowTheMessageWasSendByYou?'
         end
     end
 end)
-
 
 
 Window:AddCommand('stoptime', {}, 'Stop the time', function(Arguments, Speaker)
