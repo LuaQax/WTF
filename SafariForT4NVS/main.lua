@@ -711,7 +711,7 @@ Window:AddCommand('ban', {'player', 'allowAppeal? (yes or no)', 'during', 'reaso
          else
             message = message .. "\nYou don't have eligibility to appeal."
          end
-         chat(":music 1548304764 true|:chatnotifyc 49 255 90  " .. message)
+         chat(":music 1548304764 true|:chatnotifyc all 49 255 90  " .. message)
          Window:Notification{
             Title = "CMD",
             Text = v.Name .. " Blacklisted!",
