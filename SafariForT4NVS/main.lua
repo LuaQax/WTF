@@ -639,7 +639,7 @@ print("success")
 
 local Window = Library:CreateWindow({
     Name = 'T4NVS',
-    IntroText = 'Safari CMD [ T4NVS EDITION ]\nNew Update:\nAnno is more troll\nMore update coming',
+    IntroText = 'Safari CMD [ T4NVS EDITION ]\nNew Update:\nFixed ban not showing chatnotify\nFixed Serverlock music loop\nMore major update coming\n(2022/04/20)',
     IntroIcon = 'rbxassetid://13137691101',
     IntroBlur = true,
     IntroBlurIntensity = 20,
@@ -778,7 +778,7 @@ Window:AddCommand('serverlock', {'reason'}, 'Lock the server with a reason', fun
       return
    end
 
-   chat(":music 1548304764|:f3x |:sm [ Safari ] This server is locked. Reason: ".. reason .."| :setmsg [ Safari ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
+   chat(":music 1548304764 true|:f3x |:sm [ Safari ] This server is locked. Reason: ".. reason .."| :setmsg [ Safari ] This server is locked. \t\t Whitelisted users: " .. tostring(#whitelist))
    ServerlockV = true
 end)
 
