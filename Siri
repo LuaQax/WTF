@@ -241,7 +241,7 @@ admin.New = function(data)
             state = false
             ts(mainFrame, {0.3, 'Exponential'}, {
                 Size = udim2(0, 200, 0, 30),
-                Position = udim2(0, mainFrame.AbsolutePosition.X + 20, 0, mainFrame.AbsolutePosition.Y -50)
+                Position = udim2(0, mainFrame.AbsolutePosition.X + 20, 0, mainFrame.AbsolutePosition.Y - 50)
             })
             mainFrame.TextFieldFrame.TextField.Text = ''
             ts(mainFrame.TextFieldFrame, {0.3, 'Exponential'}, {
