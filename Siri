@@ -126,7 +126,7 @@ admin.New = function(data)
 
     local mainFrame = instance('Frame', {
         Size = udim2(0, 200, 0, 30),
-        Position = half(180, 730),
+        Position = half(200, 730),
         Parent = sgui,
         BackgroundColor3 = theme.BodyColor,
         ClipsDescendants = true
